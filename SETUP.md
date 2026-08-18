@@ -4,7 +4,7 @@ Follow the steps below to set up and run the **Eye Tracking Data Prototype**.
 
 ## Requirements
 
-* Unity **21.1+**
+* Unity **2021.3+**
 * HTC VIVE Focus Vision
 * XR Interaction Toolkit
 * VIVE OpenXR Plugin
@@ -13,7 +13,7 @@ Follow the steps below to set up and run the **Eye Tracking Data Prototype**.
 
 ## 1. Download and Open the Project
 
-Download or clone this repository and open the project using **Unity 21.1 or newer**.
+Download or clone this repository and open the project using **Unity 2021.3 or newer**.
 
 Open the project through **Unity Hub** and allow Unity to finish importing and compiling the project.
 
@@ -51,9 +51,7 @@ Click **Apply**.
 
 ### Scoped Registry Setup
 
-![VIVE OpenXR Scoped Registry](Images/vive-scoped-registry.png)
-
-> Replace the image path above with the screenshot included in this repository.
+![VIVE OpenXR Scoped Registry](IMAGES/Scope-Registry.png)
 
 ---
 
@@ -73,39 +71,34 @@ Find:
 
 and click **Install**.
 
+### VIVE OpenXR Plugin
+
+![VIVE OpenXR Plugin](IMAGES/Vive-Registry.png)
+
 ---
 
-## 5. Install the Provided Tarball Package
+## 5. Download and Install VIVE OpenXR Package
 
-After installing the VIVE OpenXR Plugin, install the additional package provided with this project.
+Download **VIVE OpenXR 2.5.1** from the official VIVE OpenXR Unity releases:
 
-In **Package Manager**:
+https://github.com/ViveSoftware/VIVE-OpenXR-Unity/releases
+
+Download the required `.tgz` package.
+
+### Download Package
+
+![VIVE OpenXR Package](IMAGES/Com.htc.vive.png)
+
+After downloading the package, open **Package Manager** in Unity:
 
 1. Click the **+** button.
 2. Select **Install package from tarball...**
-3. Select the provided `.tgz` tarball file.
+3. Select the downloaded `.tgz` file.
 4. Wait for Unity to finish installing the package.
 
-Example:
+### Install Tarball
 
-```text
-Package Manager
-      │
-      ▼
-     [+]
-      │
-      ▼
-Install package from tarball...
-      │
-      ▼
-Provided .tgz file
-```
-
-### Tarball Installation
-
-![Install Tarball](Images/install-tarball.png)
-
-> Replace the image path above with the screenshot included in this repository.
+![Install Tarball](IMAGES/tarball.png)
 
 ---
 
@@ -121,25 +114,33 @@ Make sure **OpenXR** is enabled for the target platform.
 
 ## 7. Configure OpenXR Interaction Profiles
 
-Go to the OpenXR settings:
+Go to:
 
 **Project Settings → XR Plug-in Management → OpenXR**
 
-Under **Interaction Profiles**, add the required VIVE controller profile:
+Under **Interaction Profiles**, add:
 
 **VIVE Controller**
+
+### Enabled Interaction Profiles
+
+![Enabled Interaction Profiles](IMAGES/Enabled-Interaction-Profiles.png)
 
 Make sure the required controller profile is enabled for the headset.
 
 ---
 
-## 8. Enable VIVE XR Support Feature
+## 8. Enable VIVE XR Support
 
-In the OpenXR settings, check the available **VIVE XR Support** feature.
+In the OpenXR settings, locate the available **VIVE XR Support** feature.
 
 Enable:
 
 **VIVE XR Support**
+
+### OpenXR Feature Group
+
+![OpenXR Feature Group](IMAGES/OpenXR-Feature-Group.png)
 
 This enables the required VIVE-specific OpenXR functionality used by the prototype.
 
@@ -155,7 +156,7 @@ The setup flow is:
 Download Project
       │
       ▼
-Open in Unity 21.1+
+Open in Unity 2021.3+
       │
       ▼
 Install XR Interaction Toolkit
@@ -167,7 +168,10 @@ Add VIVE OpenXR Scoped Registry
 Install VIVE OpenXR Plugin
       │
       ▼
-Install Provided .tgz Package
+Download VIVE OpenXR 2.5.1
+      │
+      ▼
+Install .tgz Package
       │
       ▼
 Enable OpenXR
